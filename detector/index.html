@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>myKLA2 Detector</title>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="./css/control_utils.css"> -->
+    <script src="./js/mediapipe/camera_utils.js"></script>
+    <script src="./js/mediapipe/control_utils.js"></script>
+    <script src="./js/mediapipe/drawing_utils.js"></script>
+    <script src="./js/mediapipe/holistic.js"></script>
+
+    <script src="./js/mustache/mustache.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/sideBar.css"> -->
+    <link rel="stylesheet" href="./css/loadingSpinner.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- <div id="detectionControl">
+        <div id="detectionControlRow">
+            <div id="eyesTitle" class="partTitle">
+                Eye : 
+                <label class="switch">
+                    <input type="checkbox" id="headCheck">
+                    <span class="slider"></span>                   
+                </label>
+            </div>
+            <div id="headTitle" class="partTitle">
+                Neck : 
+                <label class="switch">
+                    <input type="checkbox" id="headCheck">
+                    <span class="slider"></span>                   
+                </label>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container">
+        <!-- webcam -->
+        <!-- <video id="video" muted="true" class="input_video"></video> -->
+
+        <div class="row">
+            <!-- <canvas class="outputCanvas"></canvas> -->
+            <div id="face">
+                <video id="webcam" style="position: abso" autoplay playsinline></video>
+                <canvas class="outputCanvas" id="outputCanvas" style="position: absolute; left: 0px; top: 0px;"></canvas>
+            </div>
+            <div id="vrmOutput">
+                <!--vrm Model canvas   setVRM.js 14-16-->
+            </div>
+
+            <div id="loading" class="loading">
+                <div class="spinner" id="spinner"></div>
+                <div class="message" id="message">
+                    Loading
+                </div>                    
+            </div>
+            
+        </div>
+
+    </div>
+    <div class="control-panel" style="display:none">
+
+    </div>
+
+
+
+    <!-- partial -->
+    <script src="./js/three.js"></script>
+    <script src="./js/GLTFLoader.js"></script>
+    <script src="./js/three-vrm.js"></script>
+    <script src="./js/OrbitControls.js"></script>
+    <script src="./js/util.js"></script>
+    <script defer src="./js/VRMManager.js"></script>
+    <script src="./js/tween.umd.js"></script>
+
+    <!-- 加上這個 如果不用es6的方法(import) -->
+    <!-- <script type="module" src="./js/mediapipeDetector.js" defer></script> -->
+    <script src="./js/vision_bundle.mjs"></script>
+    <script src="./js/mediapipeDetector.js" defer></script>
+
+
+    <script src="./js/detection/armIn.js"></script>
+    <script src="./js/detection/armOut.js"></script>
+    <script src="./js/detection/finger.js"></script>
+    <script src="./js/detection/head.js"></script>
+    <script src="./js/detection/mouth.js"></script>
+   
+
+    <script src="./js/setVRM.js"></script>
+
+
+
+
+</body>
+
+</html>

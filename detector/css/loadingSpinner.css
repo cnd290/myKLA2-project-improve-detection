@@ -1,0 +1,48 @@
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 12vw;
+    left: 0;
+    align-items: center;
+    backface-visibility: hidden;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.loading .message {
+    font-size: 3vh;
+    color: #5e7185;
+    text-align: center;
+}
+
+.loadText {
+    font-size: 2vh;
+    color: #5e7185;
+    text-align: center;
+}
+
+.loading .spinner {
+    position: absolute;
+    width: 16vh;
+    height: 16vh;
+    animation: spin 1s linear infinite;
+    border: 32px solid white;
+    border-top: 32px solid #E6D8BB;
+    border-radius: 50%;
+}
+
+.loaded .loading {
+    opacity: 0;
+}
